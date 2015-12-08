@@ -44,8 +44,3 @@ on c.CountryRegionCode=t.CountryRegionCode;
 select AVG(TotalDue)
 from Sales.SalesOrderHeader
 
-/*Write a query to report the sales order ID of those orders where the total value is greater than the average of the total value of all the orders.*/
-select SalesOrderID, TotalDue
-from Sales.SalesOrderHeader
-where TotalDue >  (select AVG(TotalDue)
-from Sales.SalesOrderHeader)
